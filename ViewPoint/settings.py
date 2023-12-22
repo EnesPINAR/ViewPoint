@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     "notifications",
     "profile",
     "register",
-    "settings"
+    "settings",
+    "users"
 ]
 
 MIDDLEWARE = [
