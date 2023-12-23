@@ -2,9 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Register | ViewPoint</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </head>
 <body>
-<h1>Register</h1>
+    <div class="container vh-100 d-flex flex-column justify-content-center align-items-center">
+        <div class="row w-100 justify-content-center">
+            <div class="col-12 col-lg-5 mt-4">
+                <h1 class="mb-4 text-center display-6 fw-bold">Register to ViewPoint</h1>
+                <form action="">
+                    <label for="email" class="form-label">Email</label>
+                    <div class="input-group mb-3">
+                      <input type="email" class="form-control" placeholder="email" id="email">
+                    </div>
+                    <label for="password" class="form-label">Password</label>
+                    <div class="input-group mb-3">
+                      <input type="password" class="form-control" placeholder="password" id="password">
+                    </div>
+                    <label for="password-again" class="form-label">Password Again</label>
+                    <div class="input-group mb-3">
+                      <input type="password" class="form-control" placeholder="password again" id="password-again">
+                    </div>
+                    <label for="birthday" class="form-label">Birthday</label>
+                    <div class="input-group mb-3">
+                      <input type="date" class="form-control" placeholder="pick your birthday" id="birthday">
+                    </div>
+                    <label for="profile-photo" class="form-label">Profile Photo</label>
+                    <div class="input-group mb-3">
+                      <input type="image" class="form-control" placeholder="profile photo" id="profile-photo" alt="profile photo">
+                    </div>
+                    <button type="submit" class="btn btn-dark btn-lg w-100 mt-3">Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
