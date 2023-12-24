@@ -1,0 +1,25 @@
+/* Bootstrap's */
+.nav-item:hover i{
+    font-size: xx-large;
+    transition: all 200ms;
+}
+.nav-item:not(:hover) i{
+    transition: all 200ms;
+}
+
+/* Custom */
+body,html {
+    margin: 0;
+    padding: 0;
+}
+* {
+    box-sizing: border-box;
+}
+.viewpoint-nav{
+    height: auto;
+}
+@media (min-width: 992px){
+    .viewpoint-nav{
+        height: 100vh;
+    }
+}
