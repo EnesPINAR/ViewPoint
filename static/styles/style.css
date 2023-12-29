@@ -1,4 +1,8 @@
 /* Bootstrap's */
+.btn-transparent{
+    background: transparent;
+    outline: none !important;
+}
 .nav-item:hover i{
     font-size: xx-large;
     transition: all 200ms;
@@ -17,6 +21,22 @@ body,html {
 }
 .viewpoint-nav{
     height: auto;
+}
+.viewpoint-post-profile-photo{
+    height: 40px;
+    width: 40px;
+}
+.viewpoint-post-actions > a > i::before{
+    border-radius: 100%;
+    padding: 0.5rem;
+}
+.viewpoint-post-actions > a:hover > i::before{
+    background: #212529;
+    color: white;
+    transition: all 200ms;
+}
+.viewpoint-post-actions > a:not(:hover) > i::before{
+    transition: all 200ms;
 }
 @media (min-width: 992px){
     .viewpoint-nav{
