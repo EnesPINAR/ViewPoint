@@ -39,18 +39,23 @@ body,html {
     transition: all 200ms;
 }
 .viewpoint-explore{
-    display: grid;
+    /*display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
+    max-height: 100vh;
+    overflow-y: auto;*/
+    display: flex;
+    max-height: 100vh;
+    overflow-y: auto;
 }
 .viewpoint-explore > .card{
-    height: fit-content;
+    /*height: fit-content;*/
 }
 @media (min-width: 992px){
     .viewpoint-nav{
         height: 100vh;
     }
     .viewpoint-explore{
-        grid-template-columns: 1fr 1fr 1fr;
+        /*grid-template-columns: 1fr 1fr 1fr;*/
     }
 }
