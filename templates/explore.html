@@ -1,10 +1,69 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Explore | ViewPoint</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.2/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </head>
-<body>
-    <h1>Explore page</h1>
+<body class="overflow-hidden">
+    <div class="row flex-column-reverse flex-lg-row w-100 vh-100 mh-100 flex-nowrap p-0 m-0">
+
+        <!-- Navigation Bar-->
+        <div class="viewpoint-nav z-1 col-12 col-lg-1 position-sticky bottom-0 bg-white d-flex align-items-center overflow-hidden bg-body-white">
+            <nav class="w-100">
+                <ul class="nav w-100 lg-flex-column align-items-center justify-content-between justify-content-lg-center fs-4">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">
+                            <i class="bi bi-house text-dark"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="bi bi-compass text-dark"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="bi bi-bell text-dark"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="bi bi-person text-dark"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="bi bi-gear text-dark"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Explore Template -->
+        <div class="col-12 col-lg-11 pt-3 flex-grow-1 bg-body-tertiary">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-6">
+                    <div class="viewpoint-explore">
+                        <div class="card p-0">
+                              <img src="https://images.unsplash.com/photo-1682687220866-c856f566f1bd?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top" alt="...">
+                        </div>
+                        <div class="card p-0">
+                              <img src="https://images.unsplash.com/photo-1506081543979-050022f9f405?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top" alt="...">
+                        </div>
+                        <div class="card p-0">
+                              <img src="https://images.unsplash.com/photo-1682687220866-c856f566f1bd?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top" alt="...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

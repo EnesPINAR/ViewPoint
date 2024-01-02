@@ -38,8 +38,19 @@ body,html {
 .viewpoint-post-actions > a:not(:hover) > i::before{
     transition: all 200ms;
 }
+.viewpoint-explore{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+.viewpoint-explore > .card{
+    height: fit-content;
+}
 @media (min-width: 992px){
     .viewpoint-nav{
         height: 100vh;
+    }
+    .viewpoint-explore{
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
