@@ -1,85 +1,113 @@
 /* Bootstrap's */
-.btn-transparent{
+.btn-transparent {
     background: transparent;
     outline: none !important;
 }
-.nav-item:hover i{
+
+.nav-item:hover i {
     font-size: xx-large;
     transition: all 200ms;
 }
-.nav-item:not(:hover) i{
+
+.nav-item:not(:hover) i {
     transition: all 200ms;
 }
 
 /* Custom */
-body,html {
+body, html {
     margin: 0;
     padding: 0;
 }
+
 * {
     box-sizing: border-box;
 }
-.viewpoint-nav{
+
+.viewpoint-nav {
     height: auto;
     /*TODO fix 1920px width*/
 }
-.viewpoint-post-profile-photo{
+
+.viewpoint-post-profile-photo {
     height: 40px;
     width: 40px;
 }
-.viewpoint-post-actions > a > i::before{
+
+.viewpoint-post-actions > a > i::before {
     border-radius: 100%;
     padding: 0.5rem;
 }
-.viewpoint-post-actions > a:hover > i::before{
+
+.viewpoint-post-actions > a:hover > i::before {
     background: #212529;
     color: white;
     transition: all 200ms;
 }
-.viewpoint-post-actions > a:not(:hover) > i::before{
+
+.viewpoint-post-actions > a:not(:hover) > i::before {
     transition: all 200ms;
 }
-.viewpoint-notifications{
+
+.viewpoint-notifications {
     max-height: calc(100vh - 60px)
 }
-@media (min-width: 992px){
-    .viewpoint-nav{
+
+.viewpoint-profile-container {
+    max-height: calc(100vh - 50px);
+}
+
+.viewpoint-profile img {
+    height: 100%;
+    aspect-ratio: 1 / 1;
+}
+
+@media (min-width: 992px) {
+    .viewpoint-nav {
         height: 100vh;
     }
-    .viewpoint-notifications{
-    max-height: 100vh;
+
+    .viewpoint-notifications {
+        max-height: 100vh;
+    }
+    .viewpoint-profile-container {
+        max-height: 100vh;
     }
 }
 
 .viewpoint-explore {
-	 display: grid;
-	 grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-	 grid-template-rows: 100px;
-	 grid-gap: 1rem;
-	 grid-auto-rows: 100px;
-	 grid-auto-flow: dense;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-rows: 100px;
+    grid-gap: 1rem;
+    grid-auto-rows: 100px;
+    grid-auto-flow: dense;
     padding: 1rem 0;
     overflow-y: auto;
     max-height: 100vh;
 }
- @media (max-width: 992px) {
-	 .viewpoint-explore {
-         max-height: calc(100vh - 55px);
-	}
+
+@media (max-width: 992px) {
+    .viewpoint-explore {
+        max-height: calc(100vh - 55px);
+    }
 }
- .viewpoint-explore .viewpoint-explore-item {
-	 display: flex;
-	 justify-content: center;
-	 align-items: center;
+
+.viewpoint-explore .viewpoint-explore-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
- .viewpoint-explore .viewpoint-explore-item:nth-of-type(3n) {
-	 grid-column: span 1;
+
+.viewpoint-explore .viewpoint-explore-item:nth-of-type(3n) {
+    grid-column: span 1;
 }
- .viewpoint-explore .viewpoint-explore-item:nth-of-type(4n) {
-	 grid-row: span 2;
+
+.viewpoint-explore .viewpoint-explore-item:nth-of-type(4n) {
+    grid-row: span 2;
 }
- .viewpoint-explore .viewpoint-explore-item img {
-	 height: 100%;
-	 width: 100%;
-	 object-fit: cover;
+
+.viewpoint-explore .viewpoint-explore-item img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
