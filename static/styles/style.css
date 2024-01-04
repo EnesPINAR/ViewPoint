@@ -48,7 +48,7 @@ body, html {
     transition: all 200ms;
 }
 
-.viewpoint-notifications {
+.viewpoint-container {
     max-height: calc(100vh - 60px)
 }
 
@@ -66,9 +66,10 @@ body, html {
         height: 100vh;
     }
 
-    .viewpoint-notifications {
+    .viewpoint-container {
         max-height: 100vh;
     }
+
     .viewpoint-profile-container {
         max-height: 100vh;
     }
@@ -117,9 +118,11 @@ body, html {
     display: inline-block;
     cursor: pointer;
 }
+
 .viewpoint-switch input {
     display: none;
 }
+
 .viewpoint-switch i {
     position: relative;
     display: inline-block;
@@ -131,6 +134,7 @@ body, html {
     vertical-align: text-bottom;
     transition: all 0.3s;
 }
+
 .viewpoint-switch i::before {
     content: "";
     position: absolute;
@@ -142,6 +146,7 @@ body, html {
     transform: translate3d(2px, 2px, 0) scale3d(1, 1, 1);
     transition: all 0.3s;
 }
+
 .viewpoint-switch i::after {
     content: "";
     position: absolute;
@@ -154,19 +159,24 @@ body, html {
     transform: translate3d(2px, 2px, 0);
     transition: all 0.2s ease-in-out;
 }
+
 .viewpoint-switch:active i::after {
     width: 28px;
     transform: translate3d(2px, 2px, 0);
 }
+
 .viewpoint-switch:active input:checked + i::after {
     transform: translate3d(16px, 2px, 0);
 }
+
 .viewpoint-switch input:checked + i {
     background-color: #5bda4e;
 }
+
 .viewpoint-switch input:checked + i::before {
     transform: translate3d(18px, 2px, 0) scale3d(0, 0, 0);
 }
+
 .viewpoint-switch input:checked + i::after {
     transform: translate3d(22px, 2px, 0);
 }

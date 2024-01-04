@@ -29,4 +29,5 @@ urlpatterns = [
     path('register/', include('register.urls')),
     path('settings/', include('settings.urls')),
     path('home/', include('home.urls')),
+    path('edit-profile/', include('editprofile.urls')),
 ]
