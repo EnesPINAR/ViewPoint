@@ -39,9 +39,15 @@ body,html {
 .viewpoint-post-actions > a:not(:hover) > i::before{
     transition: all 200ms;
 }
+.viewpoint-notifications{
+    max-height: calc(100vh - 60px)
+}
 @media (min-width: 992px){
     .viewpoint-nav{
         height: 100vh;
+    }
+    .viewpoint-notifications{
+    max-height: 100vh;
     }
 }
 
