@@ -39,9 +39,10 @@ INSTALLED_APPS = [
     "explore",
     "help",
     "login",
+    "register",
+    "logout",
     "notifications",
     "profile",
-    "register",
     "settings",
     "editprofile",
     "users"

@@ -31,10 +31,12 @@ def register(request):
                 user = User.objects.create_user(username=username, email=email, password=password)
                 user.save()
                 # TODO log user in redirect to home page
+                user_login = auth.authenticate(username=username, password=password)
+                auth.login(request, user_login)
                 # TODO create a new Profile object for new user
                 user_model = User.objects.get(username=username)
                 new_profile = Profile.objects.create(user=user_model, id_user = user_model.id)
                 new_profile.save()
-                return redirect('home')
+                return redirect('edit-profile')
     else:
         return render(request, 'register.html')

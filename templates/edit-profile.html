@@ -54,7 +54,17 @@
     <div class="col-12 col-lg-11 pt-3 flex-grow-1 bg-body-tertiary">
         <div class="row justify-content-center">
             <div class="viewpoint-container col-12 col-lg-6 overflow-y-auto py-2">
-                <form action="">
+                {% for message in messages %}
+                    <div class="alert alert-success" role="alert">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+                <form action="" method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {% comment %}<label for="username" class="form-label">Username</label>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" name="username" value="{{ user_profile.user }}" placeholder="username" id="username">
+                    </div>
                     <label for="name" class="form-label">Name</label>
                     <div class="input-group mb-3">
                         <input type="text" class="form-control" placeholder="name" id="name">
@@ -66,15 +76,22 @@
                     <label for="email" class="form-label">Email</label>
                     <div class="input-group mb-3">
                         <input type="email" class="form-control" placeholder="email" id="email">
+                    </div>{% endcomment %}
+                    <label for="bio" class="form-label">About</label>
+                    <div class="input-group mb-3">
+                        <textarea name="bio" id="bio" class="form-control">
+                            {{ user_profile.bio }}
+                        </textarea>
                     </div>
-                    <label for="birthday" class="form-label">Birthday</label>
+                    {% comment %}<label for="birthday" class="form-label">Birthday</label>
                     <div class="input-group mb-3">
                         <input type="date" class="form-control" placeholder="pick your birthday" id="birthday">
-                    </div>
+                    </div>{% endcomment %}
                     <label for="profile-photo" class="form-label">Profile Photo</label>
                     <div class="input-group mb-3">
-                        <input type="image" class="form-control" placeholder="profile photo" id="profile-photo"
-                               alt="profile photo">
+                        <input type="file" class="form-control" name="profile-photo" placeholder="profile photo"
+                               id="profile-photo">
+                        <img src="{{ user_profile.profile_img.url }}" alt="profile" class="viewpoint-editprofile-image">
                     </div>
                     <button type="submit" class="btn btn-dark btn-lg w-100 mt-3">Save Changes</button>
                 </form>
