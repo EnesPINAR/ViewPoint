@@ -1,6 +1,7 @@
 from django.contrib import admin
-from .models import Profile, Post, Like
+from . import models
 
-admin.site.register(Profile)
-admin.site.register(Post)
-admin.site.register(Like)
+admin.site.register(models.Profile)
+admin.site.register(models.Post)
+admin.site.register(models.Like)
+admin.site.register(models.FollowersCount)

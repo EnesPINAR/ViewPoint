@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     "logout",
     "upload",
     "likepost",
+    "follow",
     "notifications",
     "profile",
     "settings",
