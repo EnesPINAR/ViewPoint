@@ -8,6 +8,9 @@ from core.models import Profile, Post
 def upload(request):
     user_object = User.objects.get(username=request.user.username)
     user_profile = Profile.objects.get(user=user_object)
+
+    current_user_profile = Profile.objects.get(user=request.user)
+
     if request.method == 'POST':
         user = request.user.username
         image = request.FILES.get('post-photo')
@@ -17,4 +20,4 @@ def upload(request):
         new_post.save()
         return redirect('home')
     else:
-        return render(request, 'upload.html', {'user_profile': user_profile})
+        return render(request, 'upload.html', {'user_profile': user_profile, 'current_user_profile': current_user_profile})

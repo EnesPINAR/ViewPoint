@@ -48,7 +48,8 @@ INSTALLED_APPS = [
     "profile",
     "settings",
     "editprofile",
-    "users"
+    "users",
+    "slippers",
 ]
 
 MIDDLEWARE = [

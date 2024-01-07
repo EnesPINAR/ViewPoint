@@ -1,11 +1,12 @@
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
-from core.models import Post, FollowersCount
+from core.models import Profile, Post, FollowersCount
 from itertools import chain
 
 
 @login_required(login_url='login')
 def home(request):
+    user_profile = Profile.objects.get(user=request.user)
     user_following_list = []
     feed = []
 
@@ -19,4 +20,9 @@ def home(request):
 
     feed_list = list(chain(*feed))
 
-    return render(request, 'home.html', {'explore_list': feed_list})
+    context = {
+        'user_profile': user_profile,
+        'explore_list': feed_list
+    }
+
+    return render(request, 'home.html', context)

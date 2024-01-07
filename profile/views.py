@@ -21,6 +21,8 @@ def profile(request, pk):
     user_followers = len(FollowersCount.objects.filter(user=pk))
     user_follows = len(FollowersCount.objects.filter(follower=pk))
 
+    current_user_profile = Profile.objects.get(user=request.user)
+
     context = {
         'user_object': user_object,
         'user_profile': user_profile,
@@ -28,7 +30,8 @@ def profile(request, pk):
         'user_posts_count': user_posts_count,
         'follow_button_text': follow_button_text,
         'user_followers': user_followers,
-        'user_follows': user_follows
+        'user_follows': user_follows,
+        'current_user_profile': current_user_profile
     }
     return render(request, 'profile.html', context)
 
