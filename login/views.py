@@ -2,6 +2,7 @@ from django.contrib import auth
 from django.shortcuts import render, redirect
 from django.contrib import messages
 
+
 def login(request):
     if request.method == 'POST':
         username = request.POST['username']

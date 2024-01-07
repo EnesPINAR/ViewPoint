@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     "login",
     "register",
     "logout",
+    "upload",
+    "likepost",
     "notifications",
     "profile",
     "settings",
