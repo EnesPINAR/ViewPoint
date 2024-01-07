@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     "follow",
     "notifications",
     "profile",
+    "search",
     "settings",
     "editprofile",
     "users",

@@ -15,5 +15,6 @@ urlpatterns = [
     path('home/', include('home.urls')),
     path('edit-profile/', include('editprofile.urls')),
     path('upload/', include('upload.urls')),
-    path('like-post/', include('likepost.urls'))
+    path('like-post/', include('likepost.urls')),
+    path('search/', include('search.urls')),
 ]

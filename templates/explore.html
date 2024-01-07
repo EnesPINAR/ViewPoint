@@ -19,12 +19,12 @@
 
     <!-- Navigation Bar-->
     {% load slippers %}
-    {% #navbar username=user_profile.user.username%}
+    {% #navbar username=user_profile.user.username %}
     {% /navbar %}
 
     <!-- Explore Template -->
     <div class="col-12 col-lg-11 pt-3 flex-grow-1 bg-body-tertiary">
-        <div class="row justify-content-center">
+        <div class="row justify-content-center flex-column align-items-center">
             <div class="col-12 col-lg-6">
                 <div class='viewpoint-explore'>
                     {% for post in explore_list reversed %}
