@@ -28,7 +28,7 @@
             <div class="col-12 col-lg-6">
                 <div class='viewpoint-explore'>
                     {% for post in explore_list reversed %}
-                        <a class='viewpoint-explore-item' href="#">
+                        <a class='viewpoint-explore-item' href="/post/{{ post.id }}">
                             <img src='{{ post.image.url }}'/>
                         </a>
                     {% endfor %}

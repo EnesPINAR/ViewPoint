@@ -10,6 +10,8 @@ def LikePost(request):
 
     post = Post.objects.get(id=post_id)
 
+    back = request.META.get('HTTP_REFERER')
+
     is_liked = Like.objects.filter(post_id=post_id, username=username).first()
 
     if is_liked == None:
@@ -17,9 +19,9 @@ def LikePost(request):
         new_like.save()
         post.no_of_likes = post.no_of_likes + 1
         post.save()
-        return redirect('home')
+        return redirect(back)
     else:
         is_liked.delete()
         post.no_of_likes = post.no_of_likes - 1
         post.save()
-        return redirect('home')
+        return redirect(back)
