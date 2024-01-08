@@ -93,7 +93,7 @@
                 {% endif %}
                 <div class='viewpoint-explore pt-0'>
                     {% for post in user_posts %}
-                        <a class='viewpoint-explore-item' href="#">
+                        <a class='viewpoint-explore-item' href="/post/{{ post.id }}">
                             <img src='{{ post.image.url }}'/>
                         </a>
                     {% endfor %}

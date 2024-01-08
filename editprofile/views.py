@@ -23,6 +23,6 @@ def editProfile(request):
             user_profile.bio = bio
             user_profile.save()
         messages.info(request, 'Changes have been saved.')
-        return redirect('/edit-profile')
+        return redirect('/profile/'+user_profile.user.username)
 
     return render(request, 'edit-profile.html', {'user_profile': user_profile})

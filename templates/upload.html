@@ -31,7 +31,7 @@
                     {% csrf_token %}
                     <label for="post-photo" class="form-label">Photo</label>
                     <div class="input-group mb-3">
-                        <input type="file" class="form-control" name="post-photo" placeholder="post photo"
+                        <input type="file" accept="image/png, image/jpeg, image/jpg" class="form-control" name="post-photo" placeholder="post photo"
                                id="post-photo">
                     </div>
                     <label for="caption" class="form-label">Caption</label>
