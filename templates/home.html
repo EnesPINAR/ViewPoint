@@ -19,7 +19,7 @@
 
     <!-- Navigation Bar-->
     {% load slippers %}
-    {% #navbar username=user_profile.user.username%}
+    {% #navbar username=user_profile.user.username %}
     {% /navbar %}
 
     <!-- Post Template -->
@@ -29,11 +29,13 @@
                 {% for post in explore_list reversed %}
                     <div class="card w-100 mb-3">
                         <div class="card-body d-flex align-items-center">
-                            {% comment %}TODO fix src{% endcomment %}
+                            {% comment %}
+                            TODO fix src
                             <img src="{{ post.user.profile_img.url }}" alt="..."
                                  class="viewpoint-post-profile-photo rounded-circle me-2">
+                            {% endcomment %}
                             <a href="/profile/{{ post.user }}"
-                               class="card-text h-auto text-dark text-decoration-none">{{ post.user }}</a>
+                               class="card-text h-auto text-dark text-decoration-none">@{{ post.user }}</a>
                         </div>
                         <img src="{{ post.image.url }}"
                              class="card-img-top rounded-0" alt="...">
@@ -52,10 +54,28 @@
                                 <a href="#" class="btn-transparent p-0 text-dark link-underline-light d-flex">
                                     <i class="bi bi-cursor me-2"></i>
                                 </a>
-                                <a href="#" class="btn-transparent p-0 text-dark link-underline-light d-flex">
-                                    <i class="bi bi-three-dots-vertical"></i>
-                                </a>
+                                <div class="dropdown">
+                                    <a class="btn btn-transparent p-0 text-dark link-underline-light d-flex dropdown-toggle rounded-circle"
+                                       href="#" role="button"
+                                       data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="bi bi-three-dots-vertical"></i>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a class="dropdown-item text-danger d-flex justify-content-between align-items-center"
+                                               href="/report-post?post_id={{ post.id }}">
+                                                <p class="m-0 p-0">Report</p>
+                                                <i class="bi bi-exclamation-circle"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
+                            {% for message in messages %}
+                                <div class="alert alert-danger mb-0 mt-2" role="alert">
+                                    {{ message }}
+                                </div>
+                            {% endfor %}
                         </div>
                     </div>
                 {% endfor %}

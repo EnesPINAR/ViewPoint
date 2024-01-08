@@ -48,6 +48,29 @@ body, html {
     transition: all 200ms;
 }
 
+.viewpoint-post-actions > .dropdown > a > i::before {
+    border-radius: 100%;
+    padding: 0.5rem;
+}
+
+.viewpoint-post-actions > .dropdown > a:hover > i::before {
+    background: #212529;
+    color: white;
+    transition: all 200ms;
+}
+
+.viewpoint-post-actions > .dropdown > a:not(:hover) > i::before {
+    transition: all 200ms;
+}
+
+.viewpoint-post-actions > .dropdown > a > i::after{
+    display: none !important;
+}
+
+.dropdown-toggle::after{
+    display: none !important;
+}
+
 .viewpoint-container {
     max-height: calc(100vh - 60px)
 }

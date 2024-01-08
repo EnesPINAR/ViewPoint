@@ -15,14 +15,14 @@ def home(request):
         user_following_list.append(user.user)
 
     for usernames in user_following_list:
-        feed_lists = Post.objects.filter(user=usernames)
+        feed_lists = Post.objects.filter(user=usernames, is_active=True)
         feed.append(feed_lists)
 
     feed_list = list(chain(*feed))
 
     context = {
         'user_profile': user_profile,
-        'explore_list': feed_list
+        'explore_list': feed_list,
     }
 
     return render(request, 'home.html', context)

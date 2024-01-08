@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     "search",
     "settings",
     "editprofile",
+    "reportpost",
     "users",
     "slippers",
 ]
