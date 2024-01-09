@@ -17,6 +17,10 @@ def register(request):
         surname = request.POST['surname']
         """
 
+        if len(username) < 1 or len(email) < 1 or len(password) < 1:
+            messages.info(request, 'Credentials is not entered. Please try again.')
+            return redirect('register')
+
         if password != password_again:
             messages.info(request, 'Passwords do not match')
             return redirect('register')
