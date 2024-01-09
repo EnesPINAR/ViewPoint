@@ -47,13 +47,14 @@
                                     <i class="bi bi-suit-heart me-2"></i>
                                     <p class="m-0 lh-lg">{{ post.no_of_likes }}</p>
                                 </a>
-                                <a href="#" class="btn-transparent p-0 text-dark link-underline-light d-flex">
+                                {% comment %}<a href="#" class="btn-transparent p-0 text-dark link-underline-light d-flex">
                                     <i class="bi bi-chat me-2"></i>
                                     <p class="m-0 lh-lg">{{ post.no_of_comments }}</p>
-                                </a>
-                                <a href="#" class="btn-transparent p-0 text-dark link-underline-light d-flex">
+                                </a>{% endcomment %}
+                                {% comment %}TODO add copy e.value{% endcomment %}
+                                <button onclick="copy()" value="{{ post.id }}" class="btn-transparent p-0 text-dark link-underline-light d-flex">
                                     <i class="bi bi-cursor me-2"></i>
-                                </a>
+                                </button>
                                 <div class="dropdown">
                                     <a class="btn btn-transparent p-0 text-dark link-underline-light d-flex dropdown-toggle rounded-circle"
                                        href="#" role="button"
@@ -84,4 +85,10 @@
     </div>
 </div>
 </body>
+<script>
+    copy = (e) => {
+        let text = e.target.value
+        e.clipboardData.setData('text/plain', text);
+    }
+</script>
 </html>
