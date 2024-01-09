@@ -30,7 +30,7 @@ class Post(models.Model):
     camera_settings = models.TextField(blank=True)
     is_reported = models.BooleanField(default=False)
 
-    # TODO add comments, share (without field, only in html), report
+    # TODO add comments, share (without model, only in html)
 
     def __str__(self):
         return self.user

@@ -29,19 +29,31 @@
                 <form action="{{ searching_value }}" method="POST">
                     {% csrf_token %}
                     <div class="input-group flex-nowrap w-100 mb-2">
-                        <span class="input-group-text" id="addon-wrapping">@</span>
                         <input type="text" name="searching_value" class="form-control" placeholder="Username"
                                aria-label="Username"
                                aria-describedby="addon-wrapping">
                         <button class="btn btn-outline-tertiary border" type="submit" id="button-addon2">
-                            <i class="bi bi-search"></i>
+                            <i class="bi bi-download"></i>
                         </button>
                     </div>
                 </form>
             </div>
             <div class="col-0"></div>
             <div class="viewpoint-container viewpoint-search-container col-12 col-lg-6 overflow-y-auto py-2">
-                {% for users in username_profile_list %}
+                {% for insta_post in insta_profile_posts %}
+                    <img crossorigin="anonymous" src="{{ cors_prefix }}{{ insta_post.url }}" alt="...">
+                    {% if insta_post.caption != None %}
+                        <p class="m-0">
+                            {{ insta_post.caption }}
+                        </p>
+                    {% endif %}
+                {% endfor %}
+                {% for message in messages %}
+                    <div class="alert alert-danger" role="alert">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+                {% comment %}{% for users in username_profile_list %}
                     <div class="list-group">
                         <div class="list-group-item list-group-item-action mb-2">
                             <a href="/profile/{{ users.user }}" class="d-flex flex-row text-decoration-none">
@@ -52,20 +64,14 @@
                                     </div>
                                 </div>
                                 <div class="col-9 col-lg-10 p-0">
-                                    <div class="viewpoint-search-result card-body d-flex align-items-center h-100">
+                                    <div class="card-body d-flex flex-column justify-content-center h-100">
                                         <h5 class="card-title m-0 text-dark text-decoration-none">{{ users.user }}</h5>
-                                        {% if users.user == user_profile.user %}
-                                            <p class="m-0 text-dark ">
-                                                &nbsp;
-                                                <small class="text-body-secondary"> • you</small>
-                                            </p>
-                                        {% endif %}
                                     </div>
                                 </div>
                             </a>
                         </div>
                     </div>
-                {% endfor %}
+                {% endfor %}{% endcomment %}
             </div>
         </div>
     </div>

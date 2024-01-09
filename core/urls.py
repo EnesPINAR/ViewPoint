@@ -18,5 +18,6 @@ urlpatterns = [
     path('like-post/', include('likepost.urls')),
     path('search/', include('search.urls')),
     path('report-post/', include('reportpost.urls')),
-    path('post/<str:pk>', include('post.urls'))
+    path('post/<str:pk>', include('post.urls')),
+    path('get-posts-from-insta', include('getpostsfrominsta.urls')),
 ]

@@ -88,6 +88,10 @@ body, html {
     height: 50px;
 }
 
+.viewpoint-search-result h5, .viewpoint-search-result p {
+    width: fit-content;
+}
+
 @media (min-width: 992px) {
     .viewpoint-nav {
         height: 100vh;
