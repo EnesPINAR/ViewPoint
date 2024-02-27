@@ -27,7 +27,6 @@ class Post(models.Model):
     is_active = models.BooleanField(default=True)
     camera = models.TextField(blank=True)
     camera_settings = models.TextField(blank=True)
-    # TODO add comments, share (without field, only in html), report
 
     def __str__(self):
         return self.user
